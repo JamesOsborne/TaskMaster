@@ -50,15 +50,15 @@
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _app = __webpack_require__(5);
+	var _main = __webpack_require__(5);
 
-	var _app2 = _interopRequireDefault(_app);
+	var _main2 = _interopRequireDefault(_main);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	new _vue2.default({
 	    el: '#app',
-	    components: { App: _app2.default }
+	    components: { App: _main2.default }
 	});
 
 /***/ }),
@@ -11331,7 +11331,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/jamesosborne/Projects/TaskMaster/src/app.vue"
+	  var id = "/Users/jamesosborne/Projects/TaskMaster/src/main.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11355,8 +11355,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-135c2d00&file=app.vue!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./app.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-135c2d00&file=app.vue!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./app.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-14ad53ea&file=main.vue&scoped=true!../node_modules/sass-loader/lib/loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-14ad53ea&file=main.vue&scoped=true!../node_modules/sass-loader/lib/loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11374,7 +11374,7 @@
 
 
 	// module
-	exports.push([module.id, "\n", ""]);
+	exports.push([module.id, "", ""]);
 
 	// exports
 
@@ -11719,14 +11719,15 @@
 	};
 	// </script>
 	//
-	// <style>
+	// <style lang="scss" scoped>
+	//    @import 'styles/main.scss'
 	// </style>
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n  <div>\n    <div class=\"message\">Value is: {{ count }}</div>\n    <a href=\"#\" @click.prevent=\"increment\">Increment</a>\n  </div>\n";
+	module.exports = "\n  <div _v-14ad53ea=\"\">\n    <div class=\"message\" _v-14ad53ea=\"\">Value is: {{ count }}</div>\n    <a href=\"#\" @click.prevent=\"increment\" _v-14ad53ea=\"\">Increment</a>\n  </div>\n";
 
 /***/ })
 /******/ ]);
