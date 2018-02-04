@@ -20,5 +20,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+   @import 'styles/main.scss'
 </style>
