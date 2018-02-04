@@ -6,7 +6,8 @@ module.exports = {
                 // To the `dist` folder
                 path: __dirname + '/dist',
                 // With the filename `build.js` so it's dist/build.js
-                filename: 'build.js'
+                filename: 'build.js',
+                publicPath: '/dist/',
         },
         module: {
                 // Special compilation rules

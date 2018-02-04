@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -11374,7 +11374,7 @@
 
 
 	// module
-	exports.push([module.id, "\n.message {\n  color: blue;\n}\n", ""]);
+	exports.push([module.id, "\n", ""]);
 
 	// exports
 
@@ -11691,38 +11691,42 @@
 /* 10 */
 /***/ (function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	// <template>
-	//     <div class="message">{{ msg }}</div>
-	//     <div class="message">{{ otherMsg }}</div>
+	//   <div>
+	//     <div class="message">Value is: {{ count }}</div>
+	//     <a href="#" @click.prevent="increment">Increment</a>
+	//   </div>
 	// </template>
 	//
 	// <script>
 	exports.default = {
 	  data: function data() {
 	    return {
-	      msg: 'Hello from vue-loader!',
-	      otherMsg: 'Also hello'
+	      count: 0
 	    };
+	  },
+
+	  methods: {
+	    increment: function increment() {
+	      this.count++;
+	    }
 	  }
 	};
 	// </script>
 	//
 	// <style>
-	// .message {
-	//   color: blue;
-	// }
 	// </style>
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n    <div class=\"message\">{{ msg }}</div>\n    <div class=\"message\">{{ otherMsg }}</div>\n";
+	module.exports = "\n  <div>\n    <div class=\"message\">Value is: {{ count }}</div>\n    <a href=\"#\" @click.prevent=\"increment\">Increment</a>\n  </div>\n";
 
 /***/ })
 /******/ ]);
