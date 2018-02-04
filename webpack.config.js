@@ -20,10 +20,19 @@ module.exports = {
                                 exclude: /node_modules/
                         },
                         {
+                                test: /\.s[a|c]ss$/,
+                                loader: 'style!css!sass'
+                        },
+                        {
                                 test: /\.vue$/,
                                 loader: 'vue-loader'
                         }
                 ]
+        },
+        vue: {
+                loaders: {
+                        scss: 'style!css!sass'
+                }
         },
         resolve: {
                 alias: {
