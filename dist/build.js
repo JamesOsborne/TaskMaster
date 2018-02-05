@@ -50,15 +50,24 @@
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _main = __webpack_require__(5);
+	var _incrementer = __webpack_require__(5);
 
-	var _main2 = _interopRequireDefault(_main);
+	var _incrementer2 = _interopRequireDefault(_incrementer);
+
+	var _todoItem = __webpack_require__(12);
+
+	var _todoItem2 = _interopRequireDefault(_todoItem);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var hello;
+
 	new _vue2.default({
 	    el: '#app',
-	    components: { App: _main2.default }
+	    components: {
+	        Incrementer: _incrementer2.default,
+	        TodoItem: _todoItem2.default
+	    }
 	});
 
 /***/ }),
@@ -11331,7 +11340,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/jamesosborne/Projects/TaskMaster/src/main.vue"
+	  var id = "/Users/jamesosborne/Projects/TaskMaster/src/Components/incrementer/incrementer.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11355,8 +11364,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-14ad53ea&file=main.vue&scoped=true!../node_modules/sass-loader/lib/loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-14ad53ea&file=main.vue&scoped=true!../node_modules/sass-loader/lib/loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-fe3e977e&file=incrementer.vue&scoped=true!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./incrementer.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-fe3e977e&file=incrementer.vue&scoped=true!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./incrementer.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11697,37 +11706,82 @@
 	  value: true
 	});
 	// <template>
-	//   <div>
-	//     <div class="message">Value is: {{ count }}</div>
-	//     <a href="#" @click.prevent="increment">Increment</a>
-	//   </div>
+	//     <div>
+	//         <div class="message">Value is: {{ counter }}</div>
+	//         <a href="#" v-on:click="incrementCounter">Increment</a>
+	//         <a href="#" v-on:click="resetCounter">Reset</a>
+	//     </div>
 	// </template>
 	//
 	// <script>
 	exports.default = {
 	  data: function data() {
-	    return {
-	      count: 0
-	    };
+	    return { counter: 0 };
 	  },
 
 	  methods: {
-	    increment: function increment() {
-	      this.count++;
+	    incrementCounter: function incrementCounter() {
+	      this.counter += 1;
+	    },
+	    resetCounter: function resetCounter() {
+	      this.counter = 0;
 	    }
 	  }
 	};
 	// </script>
 	//
 	// <style lang="scss" scoped>
-	//    @import 'styles/main.scss'
+	// @import "incrementer.scss";
 	// </style>
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n  <div _v-14ad53ea=\"\">\n    <div class=\"message\" _v-14ad53ea=\"\">Value is: {{ count }}</div>\n    <a href=\"#\" @click.prevent=\"increment\" _v-14ad53ea=\"\">Increment</a>\n  </div>\n";
+	module.exports = "\n    <div _v-fe3e977e=\"\">\n        <div class=\"message\" _v-fe3e977e=\"\">Value is: {{ counter }}</div>\n        <a href=\"#\" v-on:click=\"incrementCounter\" _v-fe3e977e=\"\">Increment</a>\n        <a href=\"#\" v-on:click=\"resetCounter\" _v-fe3e977e=\"\">Reset</a>\n    </div>\n";
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(15)
+	__vue_template__ = __webpack_require__(17)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/jamesosborne/Projects/TaskMaster/src/Components/todoItem/todoItem.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ }),
+/* 13 */,
+/* 14 */,
+/* 15 */
+/***/ (function(module, exports) {
+
+	// <template>
+	//     <li>This is a todo</li>
+	// </template>
+	//
+	// <script>
+	// </script>
+	"use strict";
+
+/***/ }),
+/* 16 */,
+/* 17 */
+/***/ (function(module, exports) {
+
+	module.exports = "\n    <li>This is a todo</li>\n";
 
 /***/ })
 /******/ ]);
